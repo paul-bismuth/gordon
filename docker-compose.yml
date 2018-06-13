@@ -1,0 +1,13 @@
+version: '2'
+services:
+  db:
+    container_name: gordon_db
+    ports:
+      - 5432:5432
+    build:
+      context: db
+    command: ["sh", "-c", "/var/lib/gordon/setup.sh && postgres -h '*'"]
+    volumes:
+      - db:/var/lib/postgresql
+volumes:
+  db:
