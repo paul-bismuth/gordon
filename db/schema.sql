@@ -6,13 +6,10 @@ SET search_path TO gordon,public;
 
 -- Creation of types
 DROP TYPE IF EXISTS category;
-DROP TYPE IF EXISTS duration;
 DROP TYPE IF EXISTS direction;
 
 CREATE TYPE direction AS (title varchar(100), text text);
 CREATE TYPE category AS ENUM ('starter', 'main', 'dessert');
-CREATE TYPE duration AS ENUM('0/5', '5/10', '10/15', '15/20',
-  '20/25', '25/30', '30/45', '45/60', '60/75', '75/90', '90/120', '120/150');
 
 -- Creation of tables
 CREATE TABLE IF NOT EXISTS ingredient (
@@ -32,8 +29,9 @@ CREATE TABLE IF NOT EXISTS recipe (
     directions direction[],
     difficulty smallint CONSTRAINT difficulty_borders CHECK
       (difficulty > 0 AND difficulty < 6),
-    preparation duration,
-    cook duration,
+    preparation smallint,
+    cook smallint,
+    wait smallint,
     people smallint CONSTRAINT people_borders CHECK
       (people > 0 AND people < 13),
     category category

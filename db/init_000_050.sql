@@ -15,8 +15,8 @@ VALUES
         "(, \"Égouttez les chips sur du papier absorbant, dégustez froid à l''apéritif\")"
     }',
     1,
-    '5',
-    '5',
+    5,
+    5,
     4,
     'starter'
 );
@@ -50,8 +50,8 @@ VALUES
         "(, \"Enfournez 25 min à 180°C. Dégustez les feuilletés bien dorés et chauds à l''apéritif.\")"
     }',
     1,
-    '5',
-    '25',
+    5,
+    25,
     4,
     'starter'
 );
@@ -89,9 +89,9 @@ VALUES
         "(, \"Laissez refroidir avant de les détacher.\")"
     }',
     1,
-    '25',
-    '15',
-    '60',
+    25,
+    15,
+    60,
     4,
     'starter'
 );
@@ -142,8 +142,8 @@ VALUES
         "(, \"Sortez du four, saupoudrez de romarin et du zeste du citron râpé.\")"
     }',
     1,
-    '15',
-    '25',
+    15,
+    25,
     4,
     'starter'
 );
@@ -193,7 +193,7 @@ VALUES
         "(, \"Ajoutez le saumon, l''aneth, les zestes râpés et le jus des citrons dans la chantilly et dressez dans des ramequins.\")"
     }',
     1,
-    '10',
+    10,
     4,
     'starter'
 );
@@ -246,8 +246,8 @@ VALUES
         "(, \"Salez, poivrez et dégustez sur des tranches de pain grillées.\")"
     }',
     1,
-    '10',
-    '5',
+    10,
+    5,
     4,
     'starter'
 );
@@ -313,7 +313,7 @@ VALUES
         "(, \"Salez, poivrez et dégustez en trempant dans la sauce.\")"
     }',
     1,
-    '10',
+    10,
     4,
     'starter'
 );
@@ -369,8 +369,8 @@ VALUES
         "(, \"Dégustez bien chaud avec une salade de roquette.\")"
     }',
     1,
-    '15',
-    '25',
+    15,
+    25,
     4,
     'main'
 );
@@ -390,7 +390,7 @@ SELECT recipe.id, ingredient.id, 200, 'gramme'
 FROM recipe, ingredient;
 
 -- Asperges rôties au jambon, page 19
-INSERT INTO ingredient (name) VALUES ('asperges vertes');
+INSERT INTO ingredient (name) VALUES ('asperge verte');
 INSERT INTO ingredient (name) VALUES ('jambon cru');
 
 INSERT INTO
@@ -407,15 +407,15 @@ VALUES
         "(, \"Dégustez tiède avec de la mayonnaise.\")"
     }',
     1,
-    '5',
-    '15',
+    5,
+    15,
     4,
     'main'
 );
 
 WITH
 recipe AS (SELECT id FROM recipe WHERE name='asperges rôties au jambon'),
-ingredient AS (SELECT id FROM ingredient WHERE name='asperges vertes')
+ingredient AS (SELECT id FROM ingredient WHERE name='asperge verte')
 INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity)
 SELECT recipe.id, ingredient.id, 20
 FROM recipe, ingredient;
@@ -443,8 +443,8 @@ VALUES
         "(, \"Ajoutez les griottes et le vinaigre balsamique, laissez cuire 1 min en arrosant le foie gras. Salez, poivrez et dégustez.\")"
     }',
     1,
-    '5',
-    '5',
+    5,
+    5,
     4,
     'main'
 );
@@ -489,7 +489,7 @@ VALUES
         "(, \"Réservez au frais. Nappez de sauce 2 min avant de servir et dégustez\")"
     }',
     1,
-    '10',
+    10,
     4,
     'main'
 );
@@ -540,7 +540,7 @@ VALUES
         "(,\"Mélangez tous les ingrédients dans un saladier, salez, poivrez et ajoutez l''huile d''olive et le jus du citron. Dégustez immédiatement avec du pain grillé.\")"
     }',
     1,
-    '10',
+    10,
     4,
     'main'
 );
@@ -595,7 +595,7 @@ VALUES
         "(, \"Disposez dans un plat et enfournez 10 min. Dégustez tiède à l''apéro.\")"
     }',
     1,
-    '10',
+    10,
     4,
     'starter'
 );
@@ -629,8 +629,8 @@ VALUES
         "(, \"Servez et dégustez chaud accompagné d''une salade.\")"
     }',
     1,
-    '10',
-    '45',
+    10,
+    45,
     4,
     'main'
 );
@@ -667,9 +667,9 @@ VALUES
         "(, \"Laissez refroidir au réfrigérateur 24h avant de déguster.\")"
     }',
     1,
-    '15',
-    '75',
-    '1440',
+    15,
+    75,
+    1440,
     4,
     'starter'
 );
@@ -726,9 +726,9 @@ VALUES
         "(, \"Laissez refroidir une nuit au réfrigérateur et dégustez en tranches épaisses.\")"
     }',
     1,
-    '15',
-    '45',
-    '720',
+    15,
+    45,
+    720,
     4,
     'starter'
 );
@@ -776,9 +776,9 @@ VALUES
         "(, \"Laissez refroidir une nuit au réfrigérateur avant de déguster.\")"
     }',
     1,
-    '10',
-    '20',
-    '720',
+    10,
+    20,
+    720,
     4,
     'starter'
 );
@@ -811,8 +811,8 @@ VALUES
         "(, \"Le jour même, retirez le sel et le linge, essuyez le foie gras. Découpez en tranches puis dégustez avec des toasts de brioche.\")"
     }',
     1,
-    '10',
-    '720',
+    10,
+    720,
     4,
     'starter'
 );
@@ -846,8 +846,8 @@ VALUES
         "(, \"Faites cuire le foie gras 5 min dans un cuit-vapeur, égouttez les morceaux dans un plat et dégustez nature ou avec une vinaigrette.\")"
     }',
     1,
-    '10',
-    '20',
+    10,
+    20,
     4,
     'starter'
 );
@@ -881,9 +881,9 @@ VALUES
         "(, \"Placez au frais une nuit. Démoulez et dégustez en tranches épaisses avec une salade.\")"
     }',
     1,
-    '15',
-    '30',
-    '720',
+    15,
+    30,
+    720,
     4,
     'starter'
 );
@@ -918,9 +918,9 @@ VALUES
         "(, \"Placez au frais une nuit. Démoulez et dégustez en tranches épaisses avec une salade.\")"
     }',
     1,
-    '15',
-    '10',
-    '720',
+    15,
+    10,
+    720,
     4,
     'starter'
 );
@@ -954,8 +954,8 @@ VALUES
         "(, \"Mouillez avec l''eau de cuisson, portez à ébullition et mixez. Salez, poivrez et dégustez.\")"
     }',
     1,
-    '10',
-    '25',
+    10,
+    25,
     4,
     'starter'
 );
@@ -991,8 +991,8 @@ VALUES
         "(, \"Dressez la crème dans des assiettes creuses, ajoutez le foie gras, l''huile d''olive, poivrez et dégustez.\")"
     }',
     1,
-    '15',
-    '10',
+    15,
+    10,
     4,
     'starter'
 );
@@ -1042,8 +1042,8 @@ VALUES
         "(, \"Dressez les assiettes et recouvrez d''asperges vertes, de jambon découpé en morceaux et d''un filet d''huile d''olive.\")"
     }',
     1,
-    '10',
-    '15',
+    10,
+    15,
     4,
     'starter'
 );
@@ -1057,7 +1057,7 @@ FROM recipe, ingredient;
 
 WITH
 recipe AS (SELECT id FROM recipe WHERE name='gaspacho aux asperges'),
-ingredient AS (SELECT id FROM ingredient WHERE name='asperges vertes')
+ingredient AS (SELECT id FROM ingredient WHERE name='asperge verte')
 INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity)
 SELECT recipe.id, ingredient.id, 8
 FROM recipe, ingredient;
@@ -1088,36 +1088,36 @@ VALUES
 (
     'crème de céleri aux oeufs de saumon',
     '{
-        "(, \"Enfournez 10 min à 180°C les tranches de jambon et les asperges vertes épluchées et équeutées. Découpez l''ensemble en morceaux.\")",
-        "(, \"Chauffez les asperges blanches avec leur eau puis mixez-les dans un blender.\")",
-        "(, \"Dressez les assiettes et recouvrez d''asperges vertes, de jambon découpé en morceaux et d''un filet d''huile d''olive.\")"
+        "(, \"Épluchez et découpez le céleri en cubes et faites-les cuire 35 min à l''eau bouillante salée.\")",
+        "(, \"Retirez l''eau, ajoutez la crème et laissez cuire 10 min de plus. Salez, poivrez puis mixez l''ensemble et laissez refroidir.\")",
+        "(, \"Dressez le céleri dans des petites tasses, répartissez les oeufs de saumon, ajoutez un filet d''huile d''olive et dégustez.\")"
     }',
     1,
-    '10',
-    '15',
+    20,
+    45,
     4,
     'starter'
 );
 
 WITH
 recipe AS (SELECT id FROM recipe WHERE name='crème de céleri aux oeufs de saumon'),
-ingredient AS (SELECT id FROM ingredient WHERE name='jambon cru')
+ingredient AS (SELECT id FROM ingredient WHERE name='céleri-rave')
 INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity, measurement)
-SELECT recipe.id, ingredient.id, 4, 'tranche'
+SELECT recipe.id, ingredient.id, 500, 'gramme'
 FROM recipe, ingredient;
 
 WITH
 recipe AS (SELECT id FROM recipe WHERE name='crème de céleri aux oeufs de saumon'),
-ingredient AS (SELECT id FROM ingredient WHERE name='asperges vertes')
-INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity)
-SELECT recipe.id, ingredient.id, 8
+ingredient AS (SELECT id FROM ingredient WHERE name='crème')
+INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity, measurement)
+SELECT recipe.id, ingredient.id, 5, 'centilitre'
 FROM recipe, ingredient;
 
 WITH
 recipe AS (SELECT id FROM recipe WHERE name='crème de céleri aux oeufs de saumon'),
-ingredient AS (SELECT id FROM ingredient WHERE name='asperges blanches')
+ingredient AS (SELECT id FROM ingredient WHERE name='oeufs de saumon')
 INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity, measurement)
-SELECT recipe.id, ingredient.id, 2, 'bocaux'
+SELECT recipe.id, ingredient.id, 2, 'cuillère à soupe'
 FROM recipe, ingredient;
 
 WITH
@@ -1127,4 +1127,221 @@ INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity, measurement)
 SELECT recipe.id, ingredient.id, 2, 'cuillère à soupe'
 FROM recipe, ingredient;
 
+-- Crème de chou-fleur, huile de sésame, page 44
+-- INSERT INTO ingredient (name) VALUES ('chou-fleur');
+-- INSERT INTO ingredient (name) VALUES ('crème');
+INSERT INTO ingredient (name) VALUES ('graines de sésame');
+INSERT INTO ingredient (name) VALUES ('huile de sésame');
 
+INSERT INTO
+recipe (name, directions, difficulty, preparation, cook, people, category)
+VALUES
+(
+    'crème de chou-fleur, huile de sésame',
+    '{
+        "(, \"Découpez le chou-fleur en petits morceaux, mettez-les dans une casserole, mouillez à hauteur avec de l''eau et faites cuire 40 min à feu doux.\")",
+        "(, \"Mixez avec un mixeur plongeant, ajoutez la crème, salez, poivrez. Dressez dans des bols individuels, saupoudrez de graines de sésame, ajoutez un filet d''huilde de sésame et dégustez.\")"
+    }',
+    1,
+    15,
+    40,
+    4,
+    'starter'
+);
+
+WITH
+recipe AS (SELECT id FROM recipe WHERE name='crème de chou-fleur, huile de sésame'),
+ingredient AS (SELECT id FROM ingredient WHERE name='chou-fleur')
+INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity, measurement)
+SELECT recipe.id, ingredient.id, 500, 'gramme'
+FROM recipe, ingredient;
+
+WITH
+recipe AS (SELECT id FROM recipe WHERE name='crème de chou-fleur, huile de sésame'),
+ingredient AS (SELECT id FROM ingredient WHERE name='crème')
+INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity, measurement)
+SELECT recipe.id, ingredient.id, 1, 'cuillère à soupe'
+FROM recipe, ingredient;
+
+WITH
+recipe AS (SELECT id FROM recipe WHERE name='crème de chou-fleur, huile de sésame'),
+ingredient AS (SELECT id FROM ingredient WHERE name='graines de sésame')
+INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity, measurement)
+SELECT recipe.id, ingredient.id, 2, 'cuillère à café'
+FROM recipe, ingredient;
+
+WITH
+recipe AS (SELECT id FROM recipe WHERE name='crème de chou-fleur, huile de sésame'),
+ingredient AS (SELECT id FROM ingredient WHERE name='huile de sésame')
+INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity, measurement)
+SELECT recipe.id, ingredient.id, 4, 'cuillère à café'
+FROM recipe, ingredient;
+
+-- Gaspacho de courgettes au basilic, page 46
+INSERT INTO ingredient (name) VALUES ('basilic');
+INSERT INTO ingredient (name) VALUES ('courgette');
+INSERT INTO ingredient (name) VALUES ('pesto');
+-- INSERT INTO ingredient (name) VALUES ('huile d''olive');
+
+INSERT INTO
+recipe (name, directions, difficulty, preparation, cook, people, category)
+VALUES
+(
+    'gaspacho de courgettes au basilic',
+    '{
+        "(, \"Lavez et effeuillez le basilic. Mettez les courgettes, lavées et coupées, à cuire 30 min dans une casserole avec 25 cl d''eau.\")",
+        "(, \"Ajoutez le pesto, l''huile d''olive et les ¾ des feuilles de basilic. Mixez avec un mixeur plongeant, salez, poivrez et laissez refroidir.\")",
+        "(, \"Ajoutez le reste du basilic et dégustez.\")"
+    }',
+    1,
+    10,
+    30,
+    4,
+    'starter'
+);
+
+WITH
+recipe AS (SELECT id FROM recipe WHERE name='gaspacho de courgettes au basilic'),
+ingredient AS (SELECT id FROM ingredient WHERE name='basilic')
+INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity, measurement)
+SELECT recipe.id, ingredient.id, 1, 'botte'
+FROM recipe, ingredient;
+
+WITH
+recipe AS (SELECT id FROM recipe WHERE name='gaspacho de courgettes au basilic'),
+ingredient AS (SELECT id FROM ingredient WHERE name='courgette')
+INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity)
+SELECT recipe.id, ingredient.id, 4
+FROM recipe, ingredient;
+
+WITH
+recipe AS (SELECT id FROM recipe WHERE name='gaspacho de courgettes au basilic'),
+ingredient AS (SELECT id FROM ingredient WHERE name='pesto')
+INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity, measurement)
+SELECT recipe.id, ingredient.id, 3, 'cuillère à café'
+FROM recipe, ingredient;
+
+WITH
+recipe AS (SELECT id FROM recipe WHERE name='gaspacho de courgettes au basilic'),
+ingredient AS (SELECT id FROM ingredient WHERE name='huile d''olive')
+INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity, measurement)
+SELECT recipe.id, ingredient.id, 6, 'cuillère à soupe'
+FROM recipe, ingredient;
+
+-- Gaspacho tomates et poivrons, page 48
+INSERT INTO ingredient (name) VALUES ('poivron rouge');
+INSERT INTO ingredient (name) VALUES ('concombre');
+-- INSERT INTO ingredient (name) VALUES ('huile d''olive');
+INSERT INTO ingredient (name) VALUES ('tomates concassées');
+INSERT INTO ingredient (name) VALUES ('vinaigre');
+INSERT INTO ingredient (name) VALUES ('tomates cerise');
+
+INSERT INTO
+recipe (name, directions, difficulty, preparation, cook, people, category)
+VALUES
+(
+    'gaspacho tomates et poivrons',
+    '{
+        "(, \"Équeutez et videz les poivrons, puis plongez-les 5 min dans une casserole d''eau bouillante.\")",
+        "(, \"Épluchez, épépinez et coupez en cubes le concombre. Mixez tous les ingrédients sauf les tomates cerise dans un blender.\")",
+        "(, \"Salez, poivrez et ajoutez les tomates cerise coupées en deux. Dégustez.\")"
+    }',
+    1,
+    10,
+    5,
+    4,
+    'starter'
+);
+
+WITH
+recipe AS (SELECT id FROM recipe WHERE name='gaspacho tomates et poivrons'),
+ingredient AS (SELECT id FROM ingredient WHERE name='poivron rouge')
+INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity)
+SELECT recipe.id, ingredient.id, 2
+FROM recipe, ingredient;
+
+WITH
+recipe AS (SELECT id FROM recipe WHERE name='gaspacho tomates et poivrons'),
+ingredient AS (SELECT id FROM ingredient WHERE name='concombre')
+INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity)
+SELECT recipe.id, ingredient.id, 1
+FROM recipe, ingredient;
+
+WITH
+recipe AS (SELECT id FROM recipe WHERE name='gaspacho tomates et poivrons'),
+ingredient AS (SELECT id FROM ingredient WHERE name='huile d''olive')
+INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity, measurement)
+SELECT recipe.id, ingredient.id, 6, 'cuillère à soupe'
+FROM recipe, ingredient;
+
+WITH
+recipe AS (SELECT id FROM recipe WHERE name='gaspacho tomates et poivrons'),
+ingredient AS (SELECT id FROM ingredient WHERE name='tomates concassées')
+INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity, measurement)
+SELECT recipe.id, ingredient.id, 800, 'gramme'
+FROM recipe, ingredient;
+
+WITH
+recipe AS (SELECT id FROM recipe WHERE name='gaspacho tomates et poivrons'),
+ingredient AS (SELECT id FROM ingredient WHERE name='vinaigre')
+INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity, measurement)
+SELECT recipe.id, ingredient.id, 4, 'cuillère à soupe'
+FROM recipe, ingredient;
+
+WITH
+recipe AS (SELECT id FROM recipe WHERE name='gaspacho tomates et poivrons'),
+ingredient AS (SELECT id FROM ingredient WHERE name='tomates cerise')
+INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity, measurement)
+SELECT recipe.id, ingredient.id, 200, 'gramme'
+FROM recipe, ingredient;
+
+-- crème de potiron à la noisette, page 50
+INSERT INTO ingredient (name) VALUES ('noisette');
+INSERT INTO ingredient (name) VALUES ('potiron');
+-- INSERT INTO ingredient (name) VALUES ('crème');
+INSERT INTO ingredient (name) VALUES ('huile de noisette');
+
+INSERT INTO
+recipe (name, directions, difficulty, preparation, cook, people, category)
+VALUES
+(
+    'crème de potiron à la noisette',
+    '{
+        "(, \"Concassez les noisettes. Épluchez le potiron et découpez la chair en gros cubes.\")",
+        "(, \"Mettez-la à cuire 35 min dans une casserole avec de l''eau à hauteur.\")",
+        "(, \"Ajoutez la crème et l''huile. Portez à ébullition et mixez avec un mixeur plongeant. Salez, poivrez et dégustez avec les noisettes et un filet d''huile de noisette.\")"
+    }',
+    1,
+    10,
+    40,
+    4,
+    'starter'
+);
+
+WITH
+recipe AS (SELECT id FROM recipe WHERE name='crème de potiron à la noisette'),
+ingredient AS (SELECT id FROM ingredient WHERE name='noisette')
+INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity)
+SELECT recipe.id, ingredient.id, 20
+FROM recipe, ingredient;
+
+WITH
+recipe AS (SELECT id FROM recipe WHERE name='crème de potiron à la noisette'),
+ingredient AS (SELECT id FROM ingredient WHERE name='potiron')
+INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity, measurement)
+SELECT recipe.id, ingredient.id, 800, 'gramme'
+FROM recipe, ingredient;
+
+WITH
+recipe AS (SELECT id FROM recipe WHERE name='crème de potiron à la noisette'),
+ingredient AS (SELECT id FROM ingredient WHERE name='crème')
+INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity, measurement)
+SELECT recipe.id, ingredient.id, 20, 'centilitre'
+FROM recipe, ingredient;
+
+WITH
+recipe AS (SELECT id FROM recipe WHERE name='crème de potiron à la noisette'),
+ingredient AS (SELECT id FROM ingredient WHERE name='huile de noisette')
+INSERT INTO recipe_ingredients (fk_recipe, fk_ingredient, quantity, measurement)
+SELECT recipe.id, ingredient.id, 4, 'cuillère à soupe'
+FROM recipe, ingredient;
